@@ -1,70 +1,51 @@
-###################
-What is CodeIgniter
-###################
+# Pengaduan Masyarakat Online 📢
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+**Pengaduan Masyarakat Online** adalah platform berbasis web yang memungkinkan warga untuk mengajukan keluhan secara langsung kepada pemerintah atau pihak yang berwenang. Aplikasi ini dibangun dengan menggunakan **CodeIgniter** untuk backend, serta **CSS**, **SCSS**, dan **JavaScript** untuk tampilan dan interaktivitas.
 
-*******************
-Release Information
-*******************
+## 🌟 Fitur Utama
+- **Pengajuan Pengaduan**: Warga dapat mengajukan keluhan secara online melalui formulir yang tersedia di platform.
+- **Manajemen Pengaduan**: Admin dapat melihat, memverifikasi, dan menanggapi setiap pengaduan yang diajukan oleh warga.
+- **Sistem Kategorisasi**: Pengaduan dapat dikategorikan berdasarkan jenis masalah (misalnya: infrastruktur, kebersihan, keamanan).
+- **Pelacakan Status**: Warga dapat melacak status pengaduan mereka, dari pengajuan hingga penyelesaian.
+- **Tampilan Responsif**: Desain antarmuka yang responsif dan ramah pengguna untuk desktop dan perangkat mobile.
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+## 🛠️ Teknologi yang Digunakan
+- **Backend**: CodeIgniter (PHP Framework)
+- **Frontend**: HTML5, CSS3, SCSS, JavaScript
+- **Database**: MySQL atau MariaDB (untuk menyimpan data pengaduan)
+- **Form Validation**: Menggunakan fitur validasi dari CodeIgniter untuk memastikan data yang dimasukkan sesuai.
+  
+## 📦 Instalasi dan Penggunaan
 
-**************************
-Changelog and New Features
-**************************
+### 1. Clone Repository
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+```bash
+git clone https://github.com/username/pengaduan-masyarakat-online.git
+cd pengaduan-masyarakat-online
+```
 
-*******************
-Server Requirements
-*******************
+2. Instalasi Dependensi
+Pastikan Anda memiliki server web (misalnya Apache) dan PHP yang terpasang. Untuk menjalankan aplikasi ini, Anda perlu menginstal dependensi yang diperlukan melalui Composer jika menggunakan CodeIgniter dengan dependensi eksternal.
 
-PHP version 5.6 or newer is recommended.
+```bash
+composer install
+```
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+3. Konfigurasi Database
+Buat database baru di MySQL/MariaDB dan sesuaikan konfigurasi di file application/config/database.php:
 
-************
-Installation
-************
+```
+$db['default'] = array(
+    'dsn'   => '',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'pengaduan_db',
+    'dbdriver' => 'mysqli',
+    ...
+);
+```
+4. Menjalankan Aplikasi
+Pastikan Apache dan PHP sudah berjalan. Akses aplikasi melalui browser di http://localhost/pengaduan-masyarakat-online.
 
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+🖼️ Screenshot
